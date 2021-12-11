@@ -1,3 +1,4 @@
+set number
 set relativenumber
 set mouse=a
 set history=5000
@@ -15,4 +16,4 @@ set background=dark
 
 syntax enable
 filetype plugin indent on
-colorscheme default
+colorscheme dracula
