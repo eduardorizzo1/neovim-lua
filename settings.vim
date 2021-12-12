@@ -19,4 +19,4 @@ filetype plugin indent on
 colorscheme dracula
 
 " set filetypes as typescriptreact
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+" autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact

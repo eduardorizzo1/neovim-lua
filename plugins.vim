@@ -27,11 +27,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'joshdick/onedark.vim'
 
   " NerdTree
-  Plug 'preservim/nerdtree'
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'ryanoasis/vim-webdevicons'
-  Plug 'xuyuanp/nerdtree-git-plugin'
-  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  "Plug 'preservim/nerdtree'
+  "Plug 'ryanoasis/vim-devicons'
+  "Plug 'ryanoasis/vim-webdevicons'
+  "Plug 'xuyuanp/nerdtree-git-plugin'
+  "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
