@@ -5,11 +5,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'jiangmiao/auto-pairs'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'Yggdroot/indentLine'
-  " Javascript
-  Plug 'yuezk/vim-js'
+  Plug 'leafgarland/typescript-vim' 
+  Plug 'HerringtonDarkholme/yats.vim'
   Plug 'maxmellon/vim-jsx-pretty'
-  Plug 'sheerun/vim-polyglot'
-  " Typescript
 
   " Themes
   Plug 'Mofiqul/dracula.nvim'
@@ -25,14 +23,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'jschmold/sweet-dark.vim'
   Plug 'sickill/vim-monokai'
   Plug 'joshdick/onedark.vim'
-
-  " NerdTree
-  "Plug 'preservim/nerdtree'
-  "Plug 'ryanoasis/vim-devicons'
-  "Plug 'ryanoasis/vim-webdevicons'
-  "Plug 'xuyuanp/nerdtree-git-plugin'
-  "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-  
+ 
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
