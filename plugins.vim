@@ -1,13 +1,18 @@
 call plug#begin('~/.vim/plugged')
 
   " Dev
-  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'Yggdroot/indentLine'
-  Plug 'leafgarland/typescript-vim' 
-  Plug 'HerringtonDarkholme/yats.vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'mxw/vim-jsx'
   Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'peitalin/vim-jsx-typescript'
+
+  " Others
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+  Plug 'dense-analysis/ale'
+  Plug 'sheerun/vim-polyglot'
 
   " Themes
   Plug 'Mofiqul/dracula.nvim'
@@ -23,17 +28,15 @@ call plug#begin('~/.vim/plugged')
   Plug 'jschmold/sweet-dark.vim'
   Plug 'sickill/vim-monokai'
   Plug 'joshdick/onedark.vim'
- 
-  " Treesitter
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+  " Coc.nvim
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 
   " Lua
   Plug 'akinsho/bufferline.nvim'
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'kyazdani42/nvim-tree.lua'
-
-  " Fuzzy Finder
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 call plug#end()
