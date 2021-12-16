@@ -2,19 +2,16 @@ call plug#begin('~/.vim/plugged')
 
   " Dev
   Plug 'pangloss/vim-javascript'
-  Plug 'leafgarland/typescript-vim'
   Plug 'mxw/vim-jsx'
   Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
 
   " Others
   Plug 'jiangmiao/auto-pairs'
   Plug 'dense-analysis/ale'
-  " Plug 'sheerun/vim-polyglot'
+  Plug 'sheerun/vim-polyglot'
 
-  " Telescope
-  " Plug 'nvim-lua/plenary.nvim'
-  " Plug 'nvim-telescope/telescope.nvim'
 
   " Themes
   Plug 'Mofiqul/dracula.nvim'
