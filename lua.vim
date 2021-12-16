@@ -11,7 +11,7 @@ lua << END
       section_separators = { left = '', right = ''},
       disabled_filetypes = {},
       always_divide_middle = true,
-			theme = 'auto',
+      theme = 'auto',
     },
     sections = {
       lualine_a = {'mode'},
@@ -112,17 +112,21 @@ require"nvim-treesitter.configs".setup {
       goto_node = '<cr>',
       show_help = '?',
     },
+  },
+  highlight = {
+    enable = true,
+    disable = {},
+  },
+  ensure_installed = {
+    "tsx",
+    "json",
+    "html",
+    "scss",
+    "typescript",
+    "javascript",
+    "vim",
   }
 }
-
- -- Telescope
- -- require'telescope'.setup{ 
- --	defaults = { 
- --		file_ignore_patterns = {
-	--		"node_modules"
-		--	}
-	--	}
---	}
 
 
 END
