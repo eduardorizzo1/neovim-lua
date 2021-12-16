@@ -1,3 +1,7 @@
+syntax enable
+filetype plugin indent on
+colorscheme dracula
+
 set number
 set relativenumber
 set mouse=a
@@ -12,14 +16,9 @@ set fillchars=vert:\│
 set termguicolors
 set background=dark
 set cursorline
+
 hi CursorLine guibg=NONE
 hi CursorLineNR cterm=bold
-
-
-syntax enable
-filetype plugin indent on
-colorscheme dracula
-
 
 if (has("nvim"))
   hi Normal guibg=NONE ctermbg=NONE

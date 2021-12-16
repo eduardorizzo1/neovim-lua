@@ -9,10 +9,12 @@ call plug#begin('~/.vim/plugged')
 
   " Others
   Plug 'jiangmiao/auto-pairs'
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-telescope/telescope.nvim'
   Plug 'dense-analysis/ale'
-  Plug 'sheerun/vim-polyglot'
+  " Plug 'sheerun/vim-polyglot'
+
+  " Telescope
+  " Plug 'nvim-lua/plenary.nvim'
+  " Plug 'nvim-telescope/telescope.nvim'
 
   " Themes
   Plug 'Mofiqul/dracula.nvim'
@@ -29,9 +31,16 @@ call plug#begin('~/.vim/plugged')
   Plug 'sickill/vim-monokai'
   Plug 'joshdick/onedark.vim'
 
+  " FZF
+  Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
   " Coc.nvim
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+  " Treesitter
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
+  Plug 'nvim-treesitter/playground'
 
   " Lua
   Plug 'akinsho/bufferline.nvim'
