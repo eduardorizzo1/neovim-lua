@@ -1,19 +1,4 @@
 call plug#begin('~/.vim/plugged')
-
-  " Dev
-  Plug 'pangloss/vim-javascript'
-  Plug 'mxw/vim-jsx'
-  Plug 'maxmellon/vim-jsx-pretty'
-  Plug 'leafgarland/typescript-vim'
-  Plug 'peitalin/vim-jsx-typescript'
-
-  " Others
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'dense-analysis/ale'
-  Plug 'sheerun/vim-polyglot'
-  Plug 'Yggdroot/indentLine'
-
-
   " Themes
   Plug 'Mofiqul/dracula.nvim'
   Plug 'kyoz/purify', { 'rtp': 'vim' }
@@ -29,20 +14,40 @@ call plug#begin('~/.vim/plugged')
   Plug 'sickill/vim-monokai'
   Plug 'joshdick/onedark.vim'
 
+  " Dev
+  Plug 'pangloss/vim-javascript'
+  Plug 'mxw/vim-jsx'
+  Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'peitalin/vim-jsx-typescript'
+
+  " Dashboard
+  Plug 'glepnir/dashboard-nvim'
+  Plug 'liuchengxu/vim-clap'
+
+  " Telescope
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+
   " FZF
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
-  " Coc.nvim
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " Others
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'dense-analysis/ale'
+  " Plug 'sheerun/vim-polyglot'
+  Plug 'Yggdroot/indentLine'
 
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
+
+  " LSP
+  Plug 'neovim/nvim-lspconfig'
 
   " Lua
   Plug 'akinsho/bufferline.nvim'
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'kyazdani42/nvim-tree.lua'
-
 call plug#end()
