@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'jiangmiao/auto-pairs'
   Plug 'dense-analysis/ale'
   Plug 'sheerun/vim-polyglot'
+  Plug 'Yggdroot/indentLine'
 
 
   " Themes
