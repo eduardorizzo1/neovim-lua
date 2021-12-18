@@ -35,6 +35,11 @@ call plug#begin('~/.vim/plugged')
 
   " LSP
   Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-cmdline'
+  Plug 'hrsh7th/nvim-cmp'
 
   " Lua
   Plug 'akinsho/bufferline.nvim'
@@ -42,5 +47,4 @@ call plug#begin('~/.vim/plugged')
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'kyazdani42/nvim-tree.lua'
   Plug 'karb94/neoscroll.nvim'
-  Plug 'nvim-lua/completion-nvim'
 call plug#end()
