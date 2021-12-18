@@ -14,13 +14,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'sickill/vim-monokai'
   Plug 'joshdick/onedark.vim'
 
-  " Dev
-  " Plug 'pangloss/vim-javascript'
-  " Plug 'mxw/vim-jsx'
-  " Plug 'maxmellon/vim-jsx-pretty'
-  " Plug 'leafgarland/typescript-vim'
-  " Plug 'peitalin/vim-jsx-typescript'
-
   " Dashboard
   Plug 'glepnir/dashboard-nvim'
   Plug 'liuchengxu/vim-clap'
@@ -35,7 +28,6 @@ call plug#begin('~/.vim/plugged')
 
   " Others
   Plug 'jiangmiao/auto-pairs'
-  Plug 'dense-analysis/ale'
   Plug 'Yggdroot/indentLine'
 
   " Treesitter
@@ -50,4 +42,5 @@ call plug#begin('~/.vim/plugged')
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'kyazdani42/nvim-tree.lua'
   Plug 'karb94/neoscroll.nvim'
+  Plug 'nvim-lua/completion-nvim'
 call plug#end()
