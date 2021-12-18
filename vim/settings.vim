@@ -43,7 +43,7 @@ let g:vim_jsx_pretty_disable_tsx = 1
 
 
 " IndentLine
-let g:indentLine_enabled=1
+let g:indentLine_enabled=0
 let g:indentLine_color_gui="#31363F"
 let g:indentLine_char='c'
 let g:indentLine_char_list=['┊']

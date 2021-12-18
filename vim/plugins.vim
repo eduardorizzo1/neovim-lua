@@ -15,11 +15,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'joshdick/onedark.vim'
 
   " Dev
-  Plug 'pangloss/vim-javascript'
-  Plug 'mxw/vim-jsx'
-  Plug 'maxmellon/vim-jsx-pretty'
-  Plug 'leafgarland/typescript-vim'
-  Plug 'peitalin/vim-jsx-typescript'
+  " Plug 'pangloss/vim-javascript'
+  " Plug 'mxw/vim-jsx'
+  " Plug 'maxmellon/vim-jsx-pretty'
+  " Plug 'leafgarland/typescript-vim'
+  " Plug 'peitalin/vim-jsx-typescript'
 
   " Dashboard
   Plug 'glepnir/dashboard-nvim'
