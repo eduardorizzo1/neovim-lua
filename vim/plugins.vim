@@ -37,7 +37,6 @@ call plug#begin('~/.vim/plugged')
 
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
-  Plug 'nvim-treesitter/playground'
 
   " Lua
   Plug 'akinsho/bufferline.nvim'
