@@ -1,0 +1,5 @@
+require('plugins/bufferline')
+require('plugins/lualine')
+require('plugins/nvimtree')
+require('plugins/treesitter')
+require('dracula')

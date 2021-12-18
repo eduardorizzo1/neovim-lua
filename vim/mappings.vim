@@ -17,7 +17,7 @@ nnoremap <A-x> :bp \|bd #<cr>
 " IndentLine
 map <c-k>i : IndentLinesToggle<cr>
 
-" Nvimlua-Tree
+" Nvimtree
 map <C-b> :NvimTreeToggle<CR>
 
 " Telescope
