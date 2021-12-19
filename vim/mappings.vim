@@ -1,3 +1,6 @@
+" terminal toggle
+map <c-t> :bel term ++rows=8<CR>
+
 " ctrl+s to save
 nnoremap <c-s> :w <CR>
 inoremap <c-s> <Esc> :w <CR>l
@@ -12,7 +15,7 @@ nnoremap <c-k> <c-w>k
 " Lualine
 nnoremap <M-l> :bn<cr>
 nnoremap <M-h> :bp<cr>
-nnoremap <A-x> :bp \|bd #<cr>
+nnoremap <M-x> :bp \|bd #<cr>
 
 " IndentLine
 map <c-k>i : IndentLinesToggle<cr>
@@ -25,3 +28,23 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+
+let g:term_buf = 0
+function! Term_toggle()
+  1wincmd w
+  if g:term_buf == bufnr("")
+    setlocal bufhidden=hide
+    close
+  else
+    topleft vnew
+    try
+      exec "buffer ".g:term_buf
+    catch
+      call termopen("bash", {"detach": 0})
+      let g:term_buf = bufnr("")
+    endtry
+    startinsert!
+  endif
+endfunction
+nnoremap <f4> :call Term_toggle()<cr>
