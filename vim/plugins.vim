@@ -40,6 +40,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'hrsh7th/cmp-path'
   Plug 'hrsh7th/cmp-cmdline'
   Plug 'hrsh7th/nvim-cmp'
+  Plug 'onsails/lspkind-nvim'
 
   " Lua
   Plug 'akinsho/bufferline.nvim'
@@ -47,4 +48,5 @@ call plug#begin('~/.vim/plugged')
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'kyazdani42/nvim-tree.lua'
   Plug 'karb94/neoscroll.nvim'
+  Plug 'l3mon4d3/luasnip'
 call plug#end()
