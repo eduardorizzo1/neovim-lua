@@ -1,6 +1,6 @@
 syntax enable
 filetype plugin indent on
-colorscheme NeoSolarized
+colorscheme dracula
 
 set number
 set relativenumber
