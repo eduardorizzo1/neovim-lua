@@ -48,10 +48,14 @@ local cmp = require'cmp'
     })
   })
 
-  -- Setup lspconfig.
-  -- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-  -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  -- require('lspconfig')['typescript'].setup {
-  -- capabilities = capabilities
-  -- }
 
+
+local lspkind = require('lspkind')
+cmp.setup {
+  formatting = {
+    format = function(entry, vim_item)
+      vim_item.kind = lspkind.presets.default[vim_item.kind]
+      return vim_item
+    end
+  }
+}

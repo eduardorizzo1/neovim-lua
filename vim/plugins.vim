@@ -22,10 +22,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
 
-  " FZF
-  Plug 'junegunn/fzf.vim'
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-
   " Others
   Plug 'jiangmiao/auto-pairs'
   Plug 'Yggdroot/indentLine'
@@ -49,4 +45,5 @@ call plug#begin('~/.vim/plugged')
   Plug 'kyazdani42/nvim-tree.lua'
   Plug 'karb94/neoscroll.nvim'
   Plug 'l3mon4d3/luasnip'
+  Plug 'saadparwaiz1/cmp_luasnip'
 call plug#end()
