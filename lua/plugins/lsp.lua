@@ -1,3 +1,17 @@
+require'lspconfig'.clangd.setup{}
+require "lsp_signature".setup()
+require("luasnip/loaders/from_vscode").load()
+
+local cmp = require'cmp'
+local luasnip = require("luasnip")
+local lspkind = require('lspkind')
+local nvim_lsp = require('lspconfig')
+local protocol = require'vim.lsp.protocol'
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+vim.o.completeopt = 'menuone,noselect'
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 local has_any_words_before = function()
   if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then
     return false
@@ -6,17 +20,6 @@ local has_any_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
-require'lspconfig'.clangd.setup{}
-require "lsp_signature".setup()
-vim.o.completeopt = 'menuone,noselect'
-
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
-
-local cmp = require'cmp'
-local luasnip = require("luasnip")
-
-local lspkind = require('lspkind')
 local source_mapping = {
   buffer = "◉ Buffer",
   nvim_lsp = "👐 LSP",
@@ -91,14 +94,7 @@ cmp.setup({
   },
 })
 
-require("luasnip/loaders/from_vscode").load()
-
 -- -- -- -- 
-
-
-
-local nvim_lsp = require('lspconfig')
-local protocol = require'vim.lsp.protocol'
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
