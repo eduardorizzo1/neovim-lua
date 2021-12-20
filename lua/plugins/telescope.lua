@@ -1,4 +1,3 @@
-
 local actions = require('telescope.actions')
 
 require('telescope').setup{
@@ -13,3 +12,8 @@ require('telescope').setup{
     },
   }
 }
+
+function telescope_buffer_dir()
+  return vim.fn.expand('%:p:h')
+end
+
