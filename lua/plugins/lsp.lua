@@ -94,7 +94,18 @@ cmp.setup({
   },
 })
 
--- -- -- -- 
+
+
+local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+  -- vim.api.nvim_command [[ augroup Format ]]
+  -- vim.api.nvim_command [[ autocmd! * <buffer> ]]
+  -- vim.api.nvim_command [[ autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync() ]]
+  -- vim.api.nvim_command [[ augroup END ]]
+end
+
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
@@ -174,6 +185,4 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
   }
 )
-
-
 

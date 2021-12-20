@@ -25,6 +25,7 @@ call plug#begin('~/.vim/plugged')
   " Others
   Plug 'jiangmiao/auto-pairs'
   Plug 'Yggdroot/indentLine'
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'rafamadriz/friendly-snippets'
 
   " Treesitter
