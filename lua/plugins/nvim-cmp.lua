@@ -23,8 +23,8 @@ local cmp = require'cmp'
     },
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-      { name = 'vsnip' }, -- For vsnip users.
-      -- { name = 'luasnip' }, -- For luasnip users.
+      -- { name = 'vsnip' }, -- For vsnip users.
+      { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
     }, {
@@ -49,7 +49,7 @@ local cmp = require'cmp'
   })
 
 
-
+-- lspkind
 local lspkind = require('lspkind')
 cmp.setup {
   formatting = {
@@ -57,5 +57,10 @@ cmp.setup {
       vim_item.kind = lspkind.presets.default[vim_item.kind]
       return vim_item
     end
-  }
+  },
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
 }
