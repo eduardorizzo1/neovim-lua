@@ -25,9 +25,13 @@ call plug#begin('~/.vim/plugged')
   " Others
   Plug 'jiangmiao/auto-pairs'
   Plug 'Yggdroot/indentLine'
+  Plug 'rafamadriz/friendly-snippets'
 
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
+
+  " Tabnine
+  Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 
   " LSP
   Plug 'neovim/nvim-lspconfig'
@@ -37,6 +41,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'hrsh7th/cmp-cmdline'
   Plug 'hrsh7th/nvim-cmp'
   Plug 'onsails/lspkind-nvim'
+  Plug 'ray-x/lsp_signature.nvim'
 
   " Lua
   Plug 'akinsho/bufferline.nvim'
