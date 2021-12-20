@@ -1,3 +1,4 @@
+require'luasnip'.filetype_extend("ruby", {"rails"})
 require("luasnip/loaders/from_vscode").load()
 
 local function prequire(...)
