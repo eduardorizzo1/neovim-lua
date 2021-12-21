@@ -55,4 +55,5 @@ call plug#begin('~/.vim/plugged')
   Plug 'karb94/neoscroll.nvim'
   Plug 'l3mon4d3/luasnip'
   Plug 'saadparwaiz1/cmp_luasnip'
+  Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
