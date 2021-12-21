@@ -28,6 +28,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'rafamadriz/friendly-snippets'
 
+  " Git
+  Plug 'tpope/vim-fugitive'
+
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 
