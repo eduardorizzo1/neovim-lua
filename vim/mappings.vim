@@ -1,6 +1,3 @@
-" terminal toggle
-map <c-t> :bel term ++rows=8<CR>
-
 " ctrl+s to save
 nnoremap <c-s> :w <CR>
 inoremap <c-s> <Esc> :w <CR>l
@@ -22,35 +19,22 @@ nnoremap <M-h> :bp<cr>
 nnoremap <M-x> :bp \|bd #<cr>
 
 " IndentLine
-map <c-k>i : IndentLinesToggle<cr>
+map <c-k>i :IndentLinesToggle<cr>
 
 " Nvimtree
 map <C-b> :NvimTreeToggle<CR>
+
+" Lsp 
+nnoremap <silent>ff <cmd>lua vim.lsp.buf.formatting()<CR>
+autocmd BufWritePre * .go lua vim.lsp.buf.formatting()
+
+" Lspsaga
+nnoremap <silent> gh :Lspsaga lsp_finder<CR>
+nnoremap <silent> K <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
+nnoremap <silent> gs :Lspsaga signature_help<CR>
 
 " Telescope
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
-
-nnoremap <silent> ff <cmd>lua vim.lsp.buf.formatting()<CR>
-autocmd BufWritePre *.go lua vim.lsp.buf.formatting()
-
-let g:term_buf = 0
-function! Term_toggle()
-  1wincmd w
-  if g:term_buf == bufnr("")
-    setlocal bufhidden=hide
-    close
-  else
-    topleft vnew
-    try
-      exec "buffer ".g:term_buf
-    catch
-      call termopen("bash", {"detach": 0})
-      let g:term_buf = bufnr("")
-    endtry
-    startinsert!
-  endif
-endfunction
-nnoremap <f4> :call Term_toggle()<cr>

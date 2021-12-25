@@ -11,6 +11,7 @@ set encoding=utf8
 set autoindent
 set smartindent
 set incsearch
+set tabstop=2
 set shiftwidth=2
 set fillchars=vert:\│
 set termguicolors

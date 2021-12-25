@@ -12,6 +12,3 @@ require('plugins/lsp')
 require('plugins/telescope')
 require'colorizer'.setup()
 require('plugins/dashboard')
-
--- require('config')
--- vim.cmd('source $HOME/.config/nvim/vim/settings.vim')

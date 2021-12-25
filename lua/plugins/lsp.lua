@@ -6,6 +6,7 @@ local luasnip = require("luasnip")
 local lspkind = require('lspkind')
 local nvim_lsp = require('lspconfig')
 local protocol = require'vim.lsp.protocol'
+-- local saga = require'lspsaga'
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
@@ -104,66 +105,75 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.diagnosticls.setup {
-  on_attach = on_attach,
-  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'markdown', 'pandoc' },
-  init_options = {
-    linters = {
-      eslint = {
-        command = 'eslint_d',
-        rootPatterns = { '.git' },
-        debounce = 100,
-        args = { '--stdin', '--stdin-filename', '%filepath', '--format', 'json' },
-        sourceName = 'eslint_d',
-        parseJson = {
-          errorsRoot = '[0].messages',
-          line = 'line',
-          column = 'column',
-          endLine = 'endLine',
-          endColumn = 'endColumn',
-          message = '[eslint] ${message} [${ruleId}]',
-          security = 'severity'
-        },
-        securities = {
-          [2] = 'error',
-          [1] = 'warning'
-        }
-      },
-    },
-    filetypes = {
-      javascript = 'eslint',
-      javascriptreact = 'eslint',
-      typescript = 'eslint',
-      typescriptreact = 'eslint',
-    },
-    formatters = {
-      eslint_d = {
-        command = 'eslint_d',
-        rootPatterns = { '.git' },
-        args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
-        rootPatterns = { '.git' },
-      },
-      prettier = {
-        command = 'prettier_d_slim',
-        rootPatterns = { '.git' },
-        -- requiredFiles: { 'prettier.config.js' },
-        args = { '--stdin', '--stdin-filepath', '%filename' }
-      }
-    },
-    formatFiletypes = {
-      css = 'prettier',
-      javascript = 'prettier',
-      javascriptreact = 'prettier',
-      json = 'prettier',
-      scss = 'prettier',
-      less = 'prettier',
-      typescript = 'prettier',
-      typescriptreact = 'prettier',
-      json = 'prettier',
-      markdown = 'prettier',
-    }
-  }
-}
+-- saga.init_lsp_saga {
+--   error_sign = '',
+--   warn_sign = '',
+--   hint_sign = '',
+--   infor_sign = '',
+--   border_style = "round",
+-- }
+
+
+-- nvim_lsp.diagnosticls.setup {
+--   on_attach = on_attach,
+--   filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'markdown', 'pandoc' },
+--   init_options = {
+--     linters = {
+--       eslint = {
+--         command = 'eslint_d',
+--         rootPatterns = { '.git' },
+--         debounce = 100,
+--         args = { '--stdin', '--stdin-filename', '%filepath', '--format', 'json' },
+--         sourceName = 'eslint_d',
+--         parseJson = {
+--           errorsRoot = '[0].messages',
+--           line = 'line',
+--           column = 'column',
+--           endLine = 'endLine',
+--           endColumn = 'endColumn',
+--           message = '[eslint] ${message} [${ruleId}]',
+--           security = 'severity'
+--         },
+--         securities = {
+--           [2] = 'error',
+--           [1] = 'warning'
+--         }
+--       },
+--     },
+--     filetypes = {
+--       javascript = 'eslint',
+--       javascriptreact = 'eslint',
+--       typescript = 'eslint',
+--       typescriptreact = 'eslint',
+--     },
+--     formatters = {
+--       eslint_d = {
+--         command = 'eslint_d',
+--         rootPatterns = { '.git' },
+--         args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
+--         rootPatterns = { '.git' },
+--       },
+--       prettier = {
+--         command = 'prettier_d_slim',
+--         rootPatterns = { '.git' },
+--         -- requiredFiles: { 'prettier.config.js' },
+--         args = { '--stdin', '--stdin-filepath', '%filename' }
+--       }
+--     },
+--     formatFiletypes = {
+--       css = 'prettier',
+--       javascript = 'prettier',
+--       javascriptreact = 'prettier',
+--       json = 'prettier',
+--       scss = 'prettier',
+--       less = 'prettier',
+--       typescript = 'prettier',
+--       typescriptreact = 'prettier',
+--       json = 'prettier',
+--       markdown = 'prettier',
+--     }
+--   }
+-- }
 
 -- icon
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
