@@ -7,6 +7,14 @@ require('bufferline').setup{
     diagnostic = 'nvim_lsp',
     diagnostics_indicator = function(count, level, diagnostics_dict)
       return "("..count..")"
-    end
+    end,
+    offsets = {
+      { 
+	filetype = "NvimTree", 
+	text = '◀️ ⚔️  💀 🧛 👻 🥷 👀 🔍 ▶️',
+	text_align = "center",
+	highlight = "Directory"
+      }
+    }
   }
 }

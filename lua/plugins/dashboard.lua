@@ -1,7 +1,7 @@
 vim.g.dashboard_preview_file_height = 12
 vim.g.dashboard_preview_file_width = 100
 vim.g.dahsboard_preview_command = "cat"
--- vim.g.dashboard_preview_pipeline = 'lolcat --spread=2.5 -t --seed=156'
+vim.g.dashboard_preview_pipeline = 'lolcat --spread=2.5 -t --seed=156'
 
 vim.g.dashboard_custom_section = {
     a = {description = {' Find File          '}, command = 'Telescope find_files find_command=rg,--files,--hidden,--ignore-file,~/.rgignore'},
