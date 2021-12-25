@@ -10,4 +10,3 @@ require('plugins/luasnip')
 require('plugins/lsp')
 require('plugins/telescope')
 require'colorizer'.setup()
-
