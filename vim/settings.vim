@@ -29,6 +29,10 @@ if (has("nvim"))
   hi Pmenu ctermbg=none guibg=none
 endif
 
+if (has("NvimTree"))
+	hi cursorline guibg=grey
+endif
+
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Vim-multiple-cursors
