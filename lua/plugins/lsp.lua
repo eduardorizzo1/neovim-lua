@@ -1,16 +1,15 @@
 require'lspconfig'.clangd.setup{}
 require "lsp_signature".setup()
-require("luasnip/loaders/from_vscode").load()
-
+vim.o.completeopt = 'menuone,noselect'
 local cmp = require'cmp'
 local luasnip = require("luasnip")
 local lspkind = require('lspkind')
 local nvim_lsp = require('lspconfig')
 local protocol = require'vim.lsp.protocol'
-local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-vim.o.completeopt = 'menuone,noselect'
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+local capabilities = require('cmp_nvim_lsp').update_capabilities(
+  vim.lsp.protocol.make_client_capabilities()
+)
 
 local has_any_words_before = function()
   if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then
@@ -18,6 +17,11 @@ local has_any_words_before = function()
   end
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+end
+
+local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 end
 
 local source_mapping = {
@@ -94,19 +98,6 @@ cmp.setup({
   },
 })
 
-
-
-local on_attach = function(client, bufnr)
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
-  -- vim.api.nvim_command [[ augroup Format ]]
-  -- vim.api.nvim_command [[ autocmd! * <buffer> ]]
-  -- vim.api.nvim_command [[ autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync() ]]
-  -- vim.api.nvim_command [[ augroup END ]]
-end
-
-
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
@@ -178,7 +169,6 @@ nvim_lsp.diagnosticls.setup {
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = true,
-    -- This sets the spacing and the prefix, obviously.
     virtual_text = {
       spacing = 4,
       prefix = ' '
@@ -186,3 +176,4 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
+require("luasnip/loaders/from_vscode").load()

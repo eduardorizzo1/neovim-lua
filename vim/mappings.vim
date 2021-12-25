@@ -33,6 +33,9 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
+nnoremap <silent> ff <cmd>lua vim.lsp.buf.formatting()<CR>
+autocmd BufWritePre *.go lua vim.lsp.buf.formatting()
+
 let g:term_buf = 0
 function! Term_toggle()
   1wincmd w

@@ -25,6 +25,7 @@ if (has("nvim"))
   hi EndOfBuffer guibg=NONE ctermbg=NONE
   hi NvimTreeNormal guibg=NONE
   hi CursorLine guibg=NONE
+  hi Pmenu ctermbg=none guibg=none
 endif
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -39,9 +40,9 @@ let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
-
 " IndentLine
 let g:indentLine_enabled=0
 let g:indentLine_color_gui="#31363F"
 let g:indentLine_char='c'
 let g:indentLine_char_list=['┊']
+" let g:indentLine_char_list=['|']

@@ -29,7 +29,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'rafamadriz/friendly-snippets'
 
   " Git
-  Plug 'tpope/vim-fugitive'
+  " Plug 'tpope/vim-fugitive'
+  " Plug 'airblade/vim-gitgutter'
 
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
