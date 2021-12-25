@@ -29,10 +29,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'rafamadriz/friendly-snippets'
 
-  " Git
-  " Plug 'tpope/vim-fugitive'
-  " Plug 'airblade/vim-gitgutter'
-
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 
@@ -41,7 +37,6 @@ call plug#begin('~/.vim/plugged')
 
   " LSP
   Plug 'neovim/nvim-lspconfig'
-  " Plug 'glepnir/lspsaga.nvim'
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/cmp-path'

@@ -6,7 +6,6 @@ local luasnip = require("luasnip")
 local lspkind = require('lspkind')
 local nvim_lsp = require('lspconfig')
 local protocol = require'vim.lsp.protocol'
--- local saga = require'lspsaga'
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()

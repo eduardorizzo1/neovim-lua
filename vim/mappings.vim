@@ -26,12 +26,7 @@ map <C-b> :NvimTreeToggle<CR>
 
 " Lsp 
 nnoremap <silent>ff <cmd>lua vim.lsp.buf.formatting()<CR>
-autocmd BufWritePre * .go lua vim.lsp.buf.formatting()
-
-" Lspsaga
-nnoremap <silent> gh :Lspsaga lsp_finder<CR>
-nnoremap <silent> K <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
-nnoremap <silent> gs :Lspsaga signature_help<CR>
+autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting()
 
 " Telescope
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
