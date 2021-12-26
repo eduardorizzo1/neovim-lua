@@ -26,14 +26,11 @@ if (has("nvim"))
   hi EndOfBuffer guibg=NONE ctermbg=NONE
   hi NvimTreeNormal guibg=NONE
   hi CursorLine guibg=NONE
-  hi Pmenu ctermbg=none guibg=none
-endif
-
-if (has("NvimTree"))
-	hi cursorline guibg=grey
+  " hi Pmenu ctermbg=none guibg=none
 endif
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd BufEnter * if bufname() =~ "NvimTree" | set cursorline | endif
 
 " Vim-multiple-cursors
 let g:multi_cursor_start_word_key      = '<C-n>'
