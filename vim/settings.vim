@@ -30,7 +30,6 @@ if (has("nvim"))
 endif
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-autocmd BufEnter * if bufname() =~ "NvimTree" | set cursorline | endif
 
 " Vim-multiple-cursors
 let g:multi_cursor_start_word_key      = '<C-n>'

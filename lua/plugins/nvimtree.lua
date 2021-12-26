@@ -65,3 +65,8 @@ require'nvim-tree'.setup {
   },
 }
 
+-- vim.api.nvim_exec([[
+--     augroup NvimTreeOptions
+--         autocmd BufEnter NvimTree set cursorline guibg=LightGray
+--     augroup END
+--    ]], false)
