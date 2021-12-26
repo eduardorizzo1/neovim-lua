@@ -11,7 +11,7 @@ require('bufferline').setup{
     offsets = {
       { 
 	filetype = "NvimTree", 
-	text = '◀️ ⚔️  💀 🧛 👻 🥷 👀 🔍 ▶️',
+	text = '◀️ 🔍 💀 🧛 👻 🥷 👀 🔎 ▶️',
 	text_align = "center",
 	highlight = "Directory"
       }

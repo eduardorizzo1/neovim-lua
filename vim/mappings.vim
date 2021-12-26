@@ -7,6 +7,9 @@ vnoremap <c-s> <Esc> :w <CR>
 nnoremap <c-z> :u<CR>
 inoremap <c-z> <c-o>:u<CR>
 
+" ctrl+q
+nnoremap <c-q> :q<CR>
+
 " Navegation windows
 nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h

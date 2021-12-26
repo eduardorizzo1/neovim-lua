@@ -32,9 +32,6 @@ call plug#begin('~/.vim/plugged')
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 
-  " Tabnine
-  Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
-
   " LSP
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/cmp-nvim-lsp'
