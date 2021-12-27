@@ -1,7 +1,7 @@
 require('bufferline').setup{
-options = {
+	options = {
     view = "multiwindow",
-    separator_style = 'thin',
+    separator_style = { "", "" },
     buffer_close_icon = "",
     modified_icon = "",
     show_close_icon = true,
@@ -14,7 +14,7 @@ options = {
     tab_size = 20,
     enforce_regular_tabs = false,
     always_show_bufferline = true,
-    show_tab_indicators = true,
+    show_tab_indicators = false,
     diagnostic = 'nvim_lsp',
     
 		diagnostics_indicator = function(count, level, diagnostics_dict)
@@ -47,6 +47,75 @@ options = {
 
        return true
     end,
-  }
+  },
+
+
+	highlights = {
+		-- background = {
+		-- 	guifg = "#44475A",
+		-- 	guibg = "#191A21",
+		-- },
+
+		buffer_selected = {
+			guifg = "#8BE9FD",
+			guibg = "#21222C",
+			gui = "bold",
+		},
+		
+		close_button_selected = {
+			guifg = "#8BE9FD",
+			guibg = "#21222C",
+		},
+		
+		separator_selected = {
+    	guifg = "#21222C",
+      guibg = "#21222C",
+    },
+
+		indicator_selected = {
+    	guifg = "#191A21",
+      guibg = "#21222C",
+    },
+		
+		tab_selected = {
+			guifg = "#191A21",
+			guibg = "#21222C",
+		},
+
+		modified_selected = {
+    	guifg = "#F1FA8C",
+      guibg = "#191A21",
+    },
+		-- fill = {
+    -- 	guifg = "#191A21",
+    --   guibg = "#21222C",
+    -- },
+
+		separator = {
+			guifg = "#ABB2BF",
+			guibg = "#ABB2BF",
+		},
+
+		separator_visible = {
+			guifg = "#ABB2BF",
+			guibg = "#ABB2BF",
+		},
+
+		tab = {
+			guifg = "#191A21",
+			guibg = "#191A21",
+		},
+
+		tab_close = {
+			guifg = "#191A21",
+			guibg = "#191A21",
+		},
+
+		modified = {
+			guifg = "#F1FA8C",
+			guibg = "#191A21",
+    },
+
+	}
 
 }
