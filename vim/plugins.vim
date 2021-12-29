@@ -1,7 +1,6 @@
 call plug#begin('~/.vim/plugged')
   " Themes
   Plug 'dracula/vim', { 'as': 'dracula' }
-  " Plug 'Mofiqul/dracula.nvim'
   Plug 'kyoz/purify', { 'rtp': 'vim' }
   Plug 'icymind/neosolarized'
   Plug 'arcticicestudio/nord'
@@ -28,6 +27,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Yggdroot/indentLine'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'rafamadriz/friendly-snippets'
+	Plug 'dense-analysis/ale'
 
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
