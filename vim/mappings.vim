@@ -22,7 +22,7 @@ nnoremap <M-h> :bp<cr>
 nnoremap <M-x> :bp \|bd #<cr>
 
 " IndentLine
-map <c-k>i :IndentLinesToggle<cr>
+map <c-k>i :IndentBlanklineToggle<cr>
 
 " Nvimtree
 map <C-b> :NvimTreeToggle<CR>

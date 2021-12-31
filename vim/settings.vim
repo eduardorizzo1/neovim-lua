@@ -43,8 +43,14 @@ let g:multi_cursor_quit_key            = '<Esc>'
 
 " IndentLine
 let g:indentLine_enabled=0
-let g:indentLine_color_gui="#31363F"
+" let g:indentLine_color_gui="#31363F"
+let g:indent_setColors=0
 let g:indentLine_char='c'
 let g:indentLine_char_list=['┊']
 " let g:indentLine_char_list=['|']
 
+" Prettier
+let g:prettier#autoformat=1
+let g:prettier#autoformat_config_present=1
+let g:prettier#autoformat_config_files=[".prettierrc"]
+let g:prettier#exec_cmd_async=1

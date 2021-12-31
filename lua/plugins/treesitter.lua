@@ -13,7 +13,12 @@ require"nvim-treesitter.configs".setup {
     "vim",
     "lua",
     "css"
-  }
+  },
+	rainbow = {
+		enable = true,
+		extended_mode = true,
+		max_file_lines = nil,
+	},
 }
 
 local parser_config = require'nvim-treesitter.parsers'.get_parser_configs()

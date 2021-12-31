@@ -11,3 +11,5 @@ require('plugins/luasnip')
 require('plugins/lsp')
 require('plugins/cmp')
 require('plugins/dashboard')
+
+vim.cmd('source $HOME/.config/nvim/vim/settings.vim')
