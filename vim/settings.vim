@@ -47,7 +47,6 @@ let g:indentLine_enabled=0
 let g:indent_setColors=0
 let g:indentLine_char='c'
 let g:indentLine_char_list=['┊']
-" let g:indentLine_char_list=['|']
 
 " Prettier
 let g:prettier#autoformat=1

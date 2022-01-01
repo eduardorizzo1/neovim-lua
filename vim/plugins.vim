@@ -42,7 +42,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'hrsh7th/nvim-cmp'
   Plug 'onsails/lspkind-nvim'
   Plug 'ray-x/lsp_signature.nvim'
-	Plug 'glepnir/lspsaga.nvim'
+	Plug 'tami5/lspsaga.nvim'
 
   " Lua
   Plug 'akinsho/bufferline.nvim'
