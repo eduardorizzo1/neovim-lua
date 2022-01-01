@@ -30,6 +30,7 @@ if (has("nvim"))
 endif
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType * exe "normal zR"
 
 " Vim-multiple-cursors
 let g:multi_cursor_start_word_key      = '<C-n>'
