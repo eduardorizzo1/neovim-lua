@@ -28,6 +28,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'rafamadriz/friendly-snippets'
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+	Plug 'p00f/nvim-ts-rainbow'
 
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
