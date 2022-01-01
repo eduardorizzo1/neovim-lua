@@ -3,20 +3,20 @@ filetype plugin indent on
 colorscheme dracula
 
 set number
-set relativenumber
-set mouse=a
-set history=5000
-set clipboard+=unnamedplus
-set encoding=utf8
+set cursorline
 set autoindent
 set smartindent
 set incsearch
+set termguicolors
+set mouse=a
+set background=dark
+set history=5000
+set clipboard+=unnamedplus
+set encoding=utf8
 set tabstop=2
 set shiftwidth=2
 set fillchars=vert:\│
-set termguicolors
-set background=dark
-set cursorline
+set foldmethod=indent
 
 hi CursorLine guibg=NONE
 hi CursorLineNR cterm=bold
