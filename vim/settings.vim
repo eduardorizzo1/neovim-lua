@@ -3,6 +3,7 @@ filetype plugin indent on
 colorscheme dracula
 
 set number
+set relativenumber
 set cursorline
 set autoindent
 set smartindent
@@ -19,7 +20,7 @@ set fillchars=vert:\│
 set foldmethod=indent
 
 hi CursorLine guibg=NONE
-hi CursorLineNR cterm=bold
+hi CursorLineNR cterm=bold guifg=White gui=bold
 
 if (has("nvim"))
   hi Normal guibg=NONE ctermbg=NONE
@@ -54,3 +55,14 @@ let g:prettier#autoformat=1
 let g:prettier#autoformat_config_present=1
 let g:prettier#autoformat_config_files=[".prettierrc"]
 let g:prettier#exec_cmd_async=1
+
+" Nvim-ts-rainbow
+hi rainbowcol1 guifg=#8be9fd
+hi rainbowcol2 guifg=#bd93f9
+hi rainbowcol3 guifg=Yellow
+hi rainbowcol4 guifg=#8be9fd
+hi rainbowcol5 guifg=#bd93f9
+hi rainbowcol6 guifg=Yellow
+
+" autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\')):'match none':""
+" let HlUnderCursor=1
