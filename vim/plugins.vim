@@ -29,6 +29,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'rafamadriz/friendly-snippets'
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 	Plug 'p00f/nvim-ts-rainbow'
+	Plug 'folke/twilight.nvim'
 
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 

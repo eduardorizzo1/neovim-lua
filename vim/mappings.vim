@@ -33,6 +33,9 @@ nnoremap <M-x> :bp \|bd #<cr>
 " IndentLine
 map <c-k>i :IndentBlanklineToggle <CR>
 
+" Twilight
+map <c-k>z :Twilight <cr>
+
 " Nvimtree
 map <C-b> :NvimTreeToggle<CR>
 

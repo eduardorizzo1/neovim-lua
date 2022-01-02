@@ -26,20 +26,67 @@ cmp.setup {
       end,
    },
 
-	 formatting = {
-    format = function(entry, vim_item)
-      vim_item.kind = lspkind.presets.default[vim_item.kind]
-      local menu = source_mapping[entry.source.name]
-      if entry.source.name == 'cmp_tabnine' then
-        if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
-          menu = entry.completion_item.data.detail .. ' ' .. menu
-        end
-        vim_item.kind = ''
-      end
-      vim_item.menu = menu
-      return vim_item
-    end
-  },
+   formatting = {
+      format = function(entry, vim_item)
+	  		local icons = {
+	  		   Text = "",
+	  		   Method = "",
+	  		   Function = "",
+	  		   Constructor = "",
+	  		   Field = "ﰠ",
+	  		   Variable = "",
+	  		   Class = "ﴯ",
+	  		   Interface = "",
+	  		   Module = "",
+	  		   Property = "ﰠ",
+	  		   Unit = "塞",
+	  		   Value = "",
+	  		   Enum = "",
+	  		   Keyword = "",
+	  		   Snippet = "",
+	  		   Color = "",
+	  		   File = "",
+	  		   Reference = "",
+	  		   Folder = "",
+	  		   EnumMember = "",
+	  		   Constant = "",
+	  		   Struct = "פּ",
+	  		   Event = "",
+	  		   Operator = "",
+	  		   TypeParameter = "",
+	  		}
+
+         vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
+         -- vim_item.menu = ({
+  			 --  	buffer = "[Buffer]◉",
+  			 --  	nvim_lsp = "[LSP]👐",
+  			 --  	nvim_lua = "[Lua]🌙",
+  			 --  	cmp_tabnine = "[Tni]💡",
+  			 --  	path = "[Pth]🚧",
+  			 --  	luasnip = "[Lsn]🌜",
+         --    -- nvim_lsp = "[LSP]",
+         --    -- nvim_lua = "[Lua]",
+         --    -- buffer = "[BUF]",
+         -- })[entry.source.name]
+
+         return vim_item
+      end,
+   },
+
+--	 formatting = {
+--    format = function(entry, vim_item)
+--      vim_item.kind = lspkind.presets.default[vim_item.kind]
+--      local menu = source_mapping[entry.source.name]
+--      if entry.source.name == 'cmp_tabnine' then
+--        if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
+--          menu = entry.completion_item.data.detail .. ' ' .. menu
+--        end
+--        vim_item.kind = ''
+--      end
+--      vim_item.menu = menu
+--      return vim_item
+--    end
+--  },
 
    mapping = {
       ["<C-p>"] = cmp.mapping.select_prev_item(),
@@ -76,43 +123,3 @@ cmp.setup {
 require("luasnip/loaders/from_vscode").load()
 
 
-   -- formatting = {
-   --    format = function(entry, vim_item)
-	 --  		local icons = {
-	 --  		   Text = "",
-	 --  		   Method = "",
-	 --  		   Function = "",
-	 --  		   Constructor = "",
-	 --  		   Field = "ﰠ",
-	 --  		   Variable = "",
-	 --  		   Class = "ﴯ",
-	 --  		   Interface = "",
-	 --  		   Module = "",
-	 --  		   Property = "ﰠ",
-	 --  		   Unit = "塞",
-	 --  		   Value = "",
-	 --  		   Enum = "",
-	 --  		   Keyword = "",
-	 --  		   Snippet = "",
-	 --  		   Color = "",
-	 --  		   File = "",
-	 --  		   Reference = "",
-	 --  		   Folder = "",
-	 --  		   EnumMember = "",
-	 --  		   Constant = "",
-	 --  		   Struct = "פּ",
-	 --  		   Event = "",
-	 --  		   Operator = "",
-	 --  		   TypeParameter = "",
-	 --  		}
-
-   --       vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
-   --       vim_item.menu = ({
-   --          nvim_lsp = "[LSP]",
-   --          nvim_lua = "[Lua]",
-   --          buffer = "[BUF]",
-   --       })[entry.source.name]
-
-   --       return vim_item
-   --    end,
-   -- },

@@ -22,13 +22,25 @@ set foldmethod=indent
 hi CursorLine guibg=NONE
 hi CursorLineNR cterm=bold guifg=#f1fa8c gui=bold
 
-if (has("nvim"))
-  hi Normal guibg=NONE ctermbg=NONE
-  hi EndOfBuffer guibg=NONE ctermbg=NONE
-  hi NvimTreeNormal guibg=NONE
-  hi CursorLine guibg=NONE
+hi Normal guibg=NONE ctermbg=NONE
+hi EndOfBuffer guibg=NONE ctermbg=NONE
+hi NvimTreeNormal guibg=NONE
+hi CursorLine guibg=NONE
   " hi Pmenu ctermbg=none guibg=none
-endif
+
+" if (has("nvim"))
+"   hi Normal guibg=NONE ctermbg=NONE
+"   hi EndOfBuffer guibg=NONE ctermbg=NONE
+"   hi NvimTreeNormal guibg=NONE
+"   hi CursorLine guibg=NONE
+"   " hi Pmenu ctermbg=none guibg=none
+" endif
+
+" Dracula theme
+let g:dracula_show_end_of_buffer=1
+let g:dracula_transparent_bg=1
+let g:dracula_lualine_bg_color="#000"
+let g:dracula_italic=0
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd FileType * exe "normal zR"
@@ -46,7 +58,6 @@ let g:multi_cursor_quit_key            = '<Esc>'
 " IndentBlankLine
 let g:indent_blankline_enabled=v:true
 let g:indent_blankline_use_treesitter=v:true
-" hi IndentBlanklineChar guifg=#282a36 gui=nocombine
 hi IndentBlanklineChar guifg=#000000 gui=nocombine
 hi IndentBlanklineContextChar guifg=#bd93f9 gui=nocombine
 
