@@ -10,6 +10,7 @@ require('plugins/treesitter')
 require('plugins/luasnip')
 require('plugins/cmp')
 require('plugins/lsp')
+require('plugins/indent_blankline')
 require('plugins/dashboard')
 
 vim.cmd('source $HOME/.config/nvim/vim/settings.vim')

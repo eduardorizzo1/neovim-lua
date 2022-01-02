@@ -43,12 +43,12 @@ let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
-" IndentLine
-let g:indentLine_enabled=0
-" let g:indentLine_color_gui="#31363F"
-let g:indent_setColors=0
-let g:indentLine_char='c'
-let g:indentLine_char_list=['┊']
+" IndentBlankLine
+let g:indent_blankline_enabled=v:true
+let g:indent_blankline_use_treesitter=v:true
+" hi IndentBlanklineChar guifg=#282a36 gui=nocombine
+hi IndentBlanklineChar guifg=#000000 gui=nocombine
+hi IndentBlanklineContextChar guifg=#bd93f9 gui=nocombine
 
 " Prettier
 let g:prettier#autoformat=1

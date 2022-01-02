@@ -24,7 +24,7 @@ call plug#begin('~/.vim/plugged')
 
   " Others
   Plug 'jiangmiao/auto-pairs'
-	Plug 'Yggdroot/indentLine'
+	Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'rafamadriz/friendly-snippets'
 	Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
