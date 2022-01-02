@@ -14,7 +14,7 @@ nnoremap <c-q> :q<CR>
 vnoremap D "_d 
 
 " Toggle highlight match word
-nnoremap <leader>* :noh<CR>
+nnoremap <space>* :noh<CR>
 
 " Toggle number relative
 nnoremap <leader>n :set relativenumber!<CR>
@@ -31,10 +31,10 @@ nnoremap <M-h> :bp<cr>
 nnoremap <M-x> :bp \|bd #<cr>
 
 " IndentLine
-map <c-k>i :IndentBlanklineToggle <CR>
+map <c-k>i :IndentBlanklineToggle<CR>
 
 " Twilight
-map <c-k>z :Twilight <cr>
+map <c-k>z :Twilight<cr>
 
 " Nvimtree
 map <C-b> :NvimTreeToggle<CR>
@@ -44,3 +44,6 @@ nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+" Prettier
+nnoremap <space>p :PrettierAsync<cr>
