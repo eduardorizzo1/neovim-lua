@@ -20,7 +20,7 @@ set fillchars=vert:\│
 set foldmethod=indent
 
 hi CursorLine guibg=NONE
-hi CursorLineNR cterm=bold guifg=White gui=bold
+hi CursorLineNR cterm=bold guifg=#f1fa8c gui=bold
 
 if (has("nvim"))
   hi Normal guibg=NONE ctermbg=NONE
