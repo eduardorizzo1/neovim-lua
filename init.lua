@@ -1,5 +1,6 @@
-vim.cmd('source $HOME/.config/nvim/vim/init.vim')
-
+vim.cmd('source $HOME/.config/nvim/vim/plugins.vim')
+vim.cmd('source $HOME/.config/nvim/vim/settings.vim')
+vim.cmd('source $HOME/.config/nvim/vim/mappings.vim')
 require('plugins/neoscroll')
 require'colorizer'.setup()
 require('plugins/lualine')
@@ -12,5 +13,3 @@ require('plugins/cmp')
 require('plugins/lsp')
 require('plugins/indent_blankline')
 require('plugins/dashboard')
-
-vim.cmd('source $HOME/.config/nvim/vim/settings.vim')
