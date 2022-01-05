@@ -18,9 +18,10 @@ set tabstop=2
 set shiftwidth=2
 set fillchars=vert:\│
 set foldmethod=indent
+" set omnifunc=syntaxcomplete#Complete
 
 hi CursorLine guibg=NONE
-hi CursorLineNR cterm=bold guifg=#f1fa8c gui=bold
+" hi CursorLineNR cterm=bold guifg=#f1fa8c gui=bold
 
 hi Normal guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
@@ -74,6 +75,9 @@ hi rainbowcol3 guifg=Yellow
 hi rainbowcol4 guifg=#8be9fd
 hi rainbowcol5 guifg=#bd93f9
 hi rainbowcol6 guifg=Yellow
+
+" LSP
+" autocmd Filetype javascript setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
 " autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\')):'match none':""
 " let HlUnderCursor=1

@@ -18,6 +18,7 @@ cmp.setup {
     { name = 'buffer' },
     { name = 'path' },
     { name = 'nvim_lua' },
+		{ name = 'omni' },
   },
 
    snippet = {
@@ -37,7 +38,7 @@ cmp.setup {
 	  		   Variable = "",
 	  		   Class = "ﴯ",
 	  		   Interface = "",
-	  		   Module = "",
+	  		   Module = " ",
 	  		   Property = "ﰠ",
 	  		   Unit = "塞",
 	  		   Value = "",

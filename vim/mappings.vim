@@ -19,6 +19,10 @@ nnoremap <space>* :noh<CR>
 " Toggle number relative
 nnoremap <leader>n :set relativenumber!<CR>
 
+" Split window
+nnoremap <c-k>v :vsplit<cr>
+nnoremap <c-k>h :split<cr>
+
 " Navegation windows
 nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h

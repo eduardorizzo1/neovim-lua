@@ -25,10 +25,10 @@ require('bufferline').setup{
       { 
 				filetype = "NvimTree", 
 				-- text = '◀️ 🔍 💀 🧛 👻 🥷 👀 🔎 ▶️',
-				text = 'Explorer',
-				text_align = "center",
-				highlight = "Directory",
-				padding = 0
+				-- text = 'Explorer',
+				-- text_align = "center",
+				-- highlight = "Directory",
+				-- padding = 0
       }
     },
     

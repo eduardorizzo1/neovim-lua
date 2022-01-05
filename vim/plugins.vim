@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
   " Themes
-  Plug 'dracula/vim', { 'as': 'dracula' }
+  " Plug 'dracula/vim', { 'as': 'dracula' }
+	Plug 'Mofiqul/dracula.nvim'
   Plug 'kyoz/purify', { 'rtp': 'vim' }
   Plug 'icymind/neosolarized'
   Plug 'arcticicestudio/nord'
@@ -13,6 +14,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'jschmold/sweet-dark.vim'
   Plug 'sickill/vim-monokai'
   Plug 'joshdick/onedark.vim'
+	Plug 'bluz71/vim-moonfly-colors'
+
 
   " Dashboard
   Plug 'glepnir/dashboard-nvim'
@@ -33,14 +36,15 @@ call plug#begin('~/.vim/plugged')
 
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
+	Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
   " LSP
   Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/cmp-path'
   Plug 'hrsh7th/cmp-cmdline'
-  Plug 'hrsh7th/nvim-cmp'
   Plug 'onsails/lspkind-nvim'
   Plug 'ray-x/lsp_signature.nvim'
 	Plug 'tami5/lspsaga.nvim'
