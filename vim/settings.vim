@@ -51,7 +51,8 @@ let g:multi_cursor_quit_key            = '<Esc>'
 " IndentBlankLine
 let g:indent_blankline_enabled=v:true
 let g:indent_blankline_use_treesitter=v:true
-hi IndentBlanklineChar guifg=#000000 gui=nocombine
+" hi IndentBlanklineChar guifg=#000000 gui=nocombine
+hi IndentBlanklineChar guifg=#0b001f gui=nocombine
 hi IndentBlanklineContextChar guifg=#bd93f9 gui=nocombine
 
 " NvimTree
