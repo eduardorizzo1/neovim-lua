@@ -14,3 +14,10 @@ require('plugins/lsp')
 require('plugins/indent_blankline')
 require('plugins/dashboard')
 vim.cmd('source $HOME/.config/nvim/vim/settings.vim')
+
+
+vim.g.dracula_show_end_of_buffer = true
+-- use transparent background
+vim.g.dracula_transparent_bg = true
+-- set custom lualine background color
+vim.g.dracula_lualine_bg_color = "#0b001f"

@@ -5,7 +5,8 @@ require'lualine'.setup {
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
     always_divide_middle = true,
-    theme = 'auto',
+    -- theme = 'auto',
+		theme = 'dracula-nvim'
   },
   sections = {
     lualine_a = {'mode'},
@@ -26,3 +27,4 @@ require'lualine'.setup {
     tabline = {},
     extensions = {},
   }
+

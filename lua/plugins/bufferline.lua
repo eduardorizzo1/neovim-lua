@@ -16,6 +16,7 @@ require('bufferline').setup{
     always_show_bufferline = true,
     show_tab_indicators = false,
     diagnostic = 'nvim_lsp',
+		right_mouse_command = "vertical sbuffer %d",
     
 		diagnostics_indicator = function(count, level, diagnostics_dict)
       return "("..count..")"

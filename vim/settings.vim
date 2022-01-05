@@ -29,14 +29,6 @@ hi NvimTreeNormal guibg=NONE
 hi CursorLine guibg=NONE
   " hi Pmenu ctermbg=none guibg=none
 
-" if (has("nvim"))
-"   hi Normal guibg=NONE ctermbg=NONE
-"   hi EndOfBuffer guibg=NONE ctermbg=NONE
-"   hi NvimTreeNormal guibg=NONE
-"   hi CursorLine guibg=NONE
-"   " hi Pmenu ctermbg=none guibg=none
-" endif
-
 " Dracula theme
 let g:dracula_show_end_of_buffer=1
 let g:dracula_transparent_bg=1
@@ -62,6 +54,9 @@ let g:indent_blankline_use_treesitter=v:true
 hi IndentBlanklineChar guifg=#000000 gui=nocombine
 hi IndentBlanklineContextChar guifg=#bd93f9 gui=nocombine
 
+" NvimTree
+hi NvimTreeVertSplit guibg=none
+
 " Prettier
 let g:prettier#autoformat=1
 let g:prettier#autoformat_config_present=1
@@ -76,8 +71,19 @@ hi rainbowcol4 guifg=#8be9fd
 hi rainbowcol5 guifg=#bd93f9
 hi rainbowcol6 guifg=Yellow
 
+
+
 " LSP
 " autocmd Filetype javascript setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
 " autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\')):'match none':""
 " let HlUnderCursor=1
+
+
+" if (has("nvim"))
+"   hi Normal guibg=NONE ctermbg=NONE
+"   hi EndOfBuffer guibg=NONE ctermbg=NONE
+"   hi NvimTreeNormal guibg=NONE
+"   hi CursorLine guibg=NONE
+"   " hi Pmenu ctermbg=none guibg=none
+" endif
