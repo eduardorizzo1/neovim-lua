@@ -17,7 +17,7 @@ vnoremap D "_d
 nnoremap <space>* :noh<CR>
 
 " Toggle number relative
-nnoremap <leader>n :set relativenumber!<CR>
+nnoremap <c-k>n :set relativenumber!<CR>
 
 " Split window
 nnoremap <c-k>v :vsplit<cr>

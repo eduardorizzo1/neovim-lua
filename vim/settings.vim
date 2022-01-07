@@ -21,12 +21,13 @@ set foldmethod=indent
 " set omnifunc=syntaxcomplete#Complete
 
 hi CursorLine guibg=NONE
-" hi CursorLineNR cterm=bold guifg=#f1fa8c gui=bold
+hi CursorLineNR cterm=bold guifg=#fff gui=bold
 
 hi Normal guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
 hi NvimTreeNormal guibg=NONE
 hi CursorLine guibg=NONE
+hi SignColumn guibg=NONE
   " hi Pmenu ctermbg=none guibg=none
 
 " Dracula theme
@@ -37,6 +38,11 @@ let g:dracula_italic=0
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd FileType * exe "normal zR"
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
 
 " Vim-multiple-cursors
 let g:multi_cursor_start_word_key      = '<C-n>'
@@ -51,7 +57,6 @@ let g:multi_cursor_quit_key            = '<Esc>'
 " IndentBlankLine
 let g:indent_blankline_enabled=v:true
 let g:indent_blankline_use_treesitter=v:true
-" hi IndentBlanklineChar guifg=#000000 gui=nocombine
 hi IndentBlanklineChar guifg=#0b001f gui=nocombine
 hi IndentBlanklineContextChar guifg=#bd93f9 gui=nocombine
 

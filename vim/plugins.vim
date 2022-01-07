@@ -16,7 +16,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'joshdick/onedark.vim'
 	Plug 'bluz71/vim-moonfly-colors'
 
-
   " Dashboard
   Plug 'glepnir/dashboard-nvim'
   Plug 'liuchengxu/vim-clap'
