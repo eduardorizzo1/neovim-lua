@@ -38,11 +38,6 @@ let g:dracula_italic=0
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd FileType * exe "normal zR"
-augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
-augroup END
 
 " Vim-multiple-cursors
 let g:multi_cursor_start_word_key      = '<C-n>'
@@ -93,3 +88,11 @@ hi rainbowcol6 guifg=Yellow
 "   hi CursorLine guibg=NONE
 "   " hi Pmenu ctermbg=none guibg=none
 " endif
+
+
+
+" augroup remember_folds
+"   autocmd!
+"   autocmd BufWinLeave * mkview
+"   autocmd BufWinEnter * silent! loadview
+" augroup END
