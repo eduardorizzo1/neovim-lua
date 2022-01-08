@@ -54,8 +54,11 @@ let g:multi_cursor_quit_key            = '<Esc>'
 " IndentBlankLine
 let g:indent_blankline_enabled=v:true
 let g:indent_blankline_use_treesitter=v:true
+let g:indent_blankline_show_first_indent_level=v:true
+let g:indent_blankline_show_trailing_blankline_indent=v:false
 hi IndentBlanklineChar guifg=#282a36 gui=nocombine
 hi IndentBlanklineContextChar guifg=#6272a4 gui=nocombine
+
 
 " NvimTree
 hi NvimTreeVertSplit guibg=none
