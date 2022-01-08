@@ -18,9 +18,18 @@ parser_config.tsx.used_by = { "javascript", "typescript.tsx" }
 
 
 require'nvim-treesitter.configs'.setup {
+	rainbow = {
+		colors = {
+			"#ffff00",
+			"#00ffff",
+			"#ff0066",
+			"#ffa500",
+		},
+	},
   textobjects = {
     select = {
       enable = true,
+			extended_mode = true,
 
       -- Automatically jump forward to textobj, similar to targets.vim
       lookahead = true,
@@ -55,3 +64,11 @@ require'nvim-treesitter.configs'.setup {
   --   "lua",
   --   "css"
   -- },
+
+
+			 -- "#8be9fd",
+			 -- "#f1fa8c",
+			 -- "#ffb86c",
+			 -- "#bd93f9",
+			 -- "#ff79c6",
+			 -- "#ff5555",
