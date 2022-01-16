@@ -25,11 +25,14 @@ require('bufferline').setup{
 		offsets = {
       { 
 				filetype = "NvimTree", 
-				-- text = '◀️ 🔍 💀 🧛 👻 🥷 👀 🔎 ▶️',
-				-- text = 'Explorer',
+				--text = '◀️ 🔍 💀 🧛 👻 🥷 👀 🔎 ▶️',
+				-- text = 'File Explorer',
+				--text = function()
+				--	return vim.fn.getcwd()
+				--end,
 				-- text_align = "center",
-				-- highlight = "Directory",
-				-- padding = 0
+				highlight = "Directory",
+				padding = 0
       }
     },
     
@@ -54,64 +57,69 @@ require('bufferline').setup{
 
 
 	highlights = {
-		-- background = {
-		-- 	guifg = "#44475A",
-		-- 	guibg = "#191A21",
-		-- },
+		 --background = {
+		 --	guifg = "#44475A",
+		 --	guibg = "#191A21",
+		 --},
+		
+		--fill = {
+		--	guifg = "#191A21",
+		--	guibg = "#191A21",
+		--},
 
 		buffer_selected = {
 			guifg = "#8BE9FD",
-			guibg = "#21222C",
+			guibg = "#000000",
 			gui = "bold",
 		},
+
+		--close_button = {
+		--	guibg = "#191a21"
+		--},
 		
 		close_button_selected = {
 			guifg = "#8BE9FD",
-			guibg = "#21222C",
+			guibg = "#000000",
 		},
 		
 		separator_selected = {
-    	guifg = "#21222C",
-      guibg = "#21222C",
+    	guifg = "#0000ff",
+      guibg = "#0000ff",
     },
 
 		indicator_selected = {
-    	guifg = "#191A21",
-      guibg = "#21222C",
+    	guifg = "#000000",
+      guibg = "#000000",
     },
 		
-		tab_selected = {
-			guifg = "#191A21",
-			guibg = "#21222C",
-		},
-
 		modified_selected = {
     	guifg = "#F1FA8C",
       guibg = "#191A21",
     },
-		-- fill = {
-    -- 	guifg = "#191A21",
-    --   guibg = "#21222C",
-    -- },
 
-		separator = {
-			guifg = "#ABB2BF",
-			guibg = "#ABB2BF",
-		},
+		--separator = {
+		--	guifg = "#0000ff",
+		--	guibg = "#0000ff",
+		--},
 
-		separator_visible = {
-			guifg = "#ABB2BF",
-			guibg = "#ABB2BF",
-		},
+		--separator_visible = {
+		--	guifg = "#ABB2BF",
+		--	guibg = "#ABB2BF",
+		--},
 
 		tab = {
 			guifg = "#191A21",
 			guibg = "#191A21",
 		},
 
-		tab_close = {
+		tab_selected = {
 			guifg = "#191A21",
 			guibg = "#191A21",
+		},
+
+		tab_close = {
+		--	guifg = "#191A21",
+			guibg = "#000000",
 		},
 
 		modified = {
